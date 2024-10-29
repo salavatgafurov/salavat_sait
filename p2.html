@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация заказа лекарства</title>
+	<link rel="stylesheet" href="p2.css">
+</head>
+<body>
+<div class="container">
+    <h2>Регистрация заказа лекарства</h2>
+    <form id="orderForm">
+        <input type="text" id="firstName" placeholder="Имя" required>
+        <input type="text" id="lastName" placeholder="Фамилия" required>
+        <input type="email" id="email" placeholder="Ваш email" required>
+        <input type="number" id="quantity" placeholder="Количество" required>
+        <div class="checkbox-container">
+            <label>
+                <input type="checkbox" id="hasPrescription"> Наличие рецепта
+            </label>
+        </div>
+        <button type="submit">Отправить заказ</button>
+    </form>
+    <p id="message" style="text-align: center; color: green;"></p>
+</div>
+
+<script>
+    document.getElementById('orderForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const email = document.getElementById('email').value;
+        const quantity = document.getElementById('quantity').value;
+        const hasPrescription = document.getElementById('hasPrescription').checked;
+        document.getElementById('message').innerText = `Заказ от ${firstName} ${lastName} на ${quantity} единиц успешно отправлен!${hasPrescription ? ' Рецепт предоставлен.' : ''}`;
+        this.reset();
+    });
+</script>
+</body>
+</html>

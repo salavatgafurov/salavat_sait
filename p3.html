@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись к врачу</title>
+    <link rel="stylesheet" href="p3.css">
+</head>
+</head>
+<body>
+
+<div class="container">
+    <h2>Запись к врачу</h2>
+    <form id="appointmentForm">
+        <input type="text" id="firstName" placeholder="Имя" required>
+        <input type="text" id="lastName" placeholder="Фамилия" required>
+        <input type="email" id="email" placeholder="Ваш email" required>
+        <input type="tel" id="phone" placeholder="Телефон" required>
+        <input type="date" id="appointmentDate" required>
+        <div class="checkbox-container">
+            <label>
+                <input type="checkbox" id="hasInsurance"> Наличие медицинской страховки
+            </label>
+        </div>
+        <button type="submit">Записаться</button>
+    </form>
+    <p id="message" class="confirmation-message"></p>
+    <p id="infoMessage" class="confirmation-message" style="display: none;">Вам придет смс-код с талончиком для очереди, не болейте!</p>
+</div>
+
+<script>
+    document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const appointmentDate = document.getElementById('appointmentDate').value;
+        const hasInsurance = document.getElementById('hasInsurance').checked;
+
+        // Здесь можно добавить код для отправки данных на сервер
+
+        document.getElementById('message').innerText = `Запись на ${appointmentDate} для ${firstName} ${lastName} успешно создана!${hasInsurance ? ' Страховка подтверждена.' : ''}`;
+        document.getElementById('infoMessage').style.display = 'block';
+        this.reset();
+    });
+</script>
+
+</body>
+</html>

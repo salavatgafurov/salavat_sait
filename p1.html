@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Напоминание о лекарствах</title>
+    <link rel="stylesheet" href="p1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Напоминание о лекарствах</h1>
+        <a href="file:///C:/Users/salav/Desktop/%D0%93%D0%B0%D1%84%D1%83%D1%80%D0%BE%D0%B2%20%D0%A1%D0%B0%D0%BB%D0%B0%D0%B2%D0%B0%D1%82/p0.html"><img src="https://cdn.culture.ru/images/536539eb-0c07-580f-a6e1-287e373a44f6" alt="Медицинские препараты" class="header-image"></a>
+        <div class="input-group">
+            <input type="text" id="medName" placeholder="Название лекарства">
+            <select id="medDay">
+                <option value="">Выберите день недели</option>
+                <option value="Понедельник">Понедельник</option>
+                <option value="Вторник">Вторник</option>
+                <option value="Среда">Среда</option>
+                <option value="Четверг">Четверг</option>
+                <option value="Пятница">Пятница</option>
+                <option value="Суббота">Суббота</option>
+                <option value="Воскресенье">Воскресенье</option>
+            </select>
+            <button onclick="addReminder()">Добавить напоминание</button>
+        </div>
+        
+        <h2>Популярные виды лекарств</h2>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide active">
+                    <img src="https://yandex-images.clstorage.net/56Zr1hx28/95559a1IFzL/3VAogNKiSAH63yjV8WObjZOd1ZNFMz03YgkC90NMQ44Llri33iVsaw92yRp09qmA0aCKhxRH5fOCYbNSZ2eJWEhUO5FAZN-UKll91_Gi2wrEzRHUU7IqcfKeAfODzlSPCRmjK4K4IjQXaVUF_-b8k5Qlk1zQVDKpErBx3686FUabnGVO1TPFAzeNJJa24xZOyphS2lz95vGglof_0YNDmNtbbW6Asm10U2JSjfBlPAETq5Heyxezbly4Mxzk89fE25EkSBVzTskywSvY9yofwkFXndAfsK936daCdZTBy1eVHqqnSPOsvZstEI85JDEMU2KXk8obuiXfcnsSIjtfChVYYU3TOUsG-o8lHDTp1goJ1J8UXbTkd28VivOUjEdQHp8m645zpPLdY1JN_6lwTJQkH5KB3j4sX_Q6Wmp2WQaX3GiPH7COgf0K4p15o1_PCJLUXdPwKTci0w81nowJGhZYLS5Hs-G1lWtQj_kgMEsT451ThBSzq5PxttLiuNkL2J8tQlQ9DQi_xSoQeyZTyolSHBwcvSn4IN7OsdCEQtKZECSji7Ngs95g1Y4w4zgGWSLWVsbcNCtVtPhUJz_QDt-Z4Y4fPIvMNo9sk_Ru0gpA3JjXm_ChPyLXyXkXg8GanF4sKA8-5DPYphaGv6E9QtHrGBDLknArnD-_nOS1FsrbXa6MErIPBrUMLVR_bpyKS9BZVFP8I_etUAH8HU9IGtESKmaAsW5_kGAYA7lo8kTb6xlXTdkzoR_--N5mMViN1FlkTl2yhkTzziSd9OiWictWElzWMyI4opXJNtRGSpafmiVuSrHnuxin1sa96nYGHWRcGMYT8C0bt3faa3EXh92ZJMYX-E6CMkGv2_Nr24AKFFETHnDptGbeyHuYjUqQmZwhYwB-4_2WoREL_O0wgdspHtnJ0Tbi1Dp5GWe12AtR2KIOknpHArNE4hA34VfIA9JYmNo7LPlgG4b6HM" alt="Изображение 1">
+                </div>
+                <div class="slide">
+                    <img src="https://s3.objstor.cloud4u.com/unti-prod-people/file/presentation/project/pmadqwvlil.png" alt="Изображение 2">
+                </div>
+                <div class="slide">
+                    <img src="https://kafema.ru/com/stuppuwaw/img322584.jpg" alt="Изображение 3">
+                </div>
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
+        <button id="showRemindersBtn">Показать ваши напоминания</button>
+    </div>
+    
+    <div id="reminderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Ваши напоминания</h2>
+            <ul id="reminderList"></ul>
+        </div>
+    </div>
+
+    <script>
+        let reminders = [];
+        let slideIndex = 0;
+
+        function addReminder() {
+            const name = document.getElementById('medName').value;
+            const day = document.getElementById('medDay').value;
+            if (name && day) {
+                reminders.push(`${name} - ${day}`);
+                document.getElementById('medName').value = '';
+                document.getElementById('medDay').value = '';
+                alert('Напоминание добавлено!');
+            } else {
+                alert('Пожалуйста, заполните все поля.');
+            }
+        }
+
+        function showReminders() {
+            const reminderList = document.getElementById('reminderList');
+            reminderList.innerHTML = '';
+            reminders.forEach(reminder => {
+                const li = document.createElement('li');
+                li.textContent = reminder;
+                reminderList.appendChild(li);
+            });
+            document.getElementById('reminderModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('reminderModal').style.display = 'none';
+        }
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            const slides = document.getElementsByClassName("slide");
+            if (n >= slides.length) { slideIndex = 0; }
+            if (n < 0) { slideIndex = slides.length - 1; }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex].
+            style.display = "block";  
+        }
+
+        document.getElementById('showRemindersBtn').addEventListener('click', showReminders);
+        showSlides(slideIndex);
+    </script>
+</body>
+</html>

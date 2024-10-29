@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Популярные лекарства</title>
+    <link rel="stylesheet" href="p0.css">
+</head>
+<body>
+
+<div class="intro" id="intro">
+    <div class="intro-content">
+        <h1>Аптека для душевнобольных!</h1>
+        <button id="close-intro" class="btn">Перейти</button>
+    </div>
+</div>
+
+<header>
+    <a href="file:///C:/Users/salav/Desktop/%D0%93%D0%B0%D1%84%D1%83%D1%80%D0%BE%D0%B2%20%D0%A1%D0%B0%D0%BB%D0%B0%D0%B2%D0%B0%D1%82/p0.html"><img src="https://cdn.culture.ru/images/536539eb-0c07-580f-a6e1-287e373a44f6" alt="Медицинские препараты" class="header-image"></a>
+    <h1 class="preLogo">Популярные лекарства</h1>
+    <nav>
+        <a href="file:///C:/Users/salav/Desktop/%D0%93%D0%B0%D1%84%D1%83%D1%80%D0%BE%D0%B2%20%D0%A1%D0%B0%D0%BB%D0%B0%D0%B2%D0%B0%D1%82/p0.html"><button class="nav-btn">Главная</button></a>
+        <a href="file:///C:/Users/salav/Desktop/%D0%93%D0%B0%D1%84%D1%83%D1%80%D0%BE%D0%B2%20%D0%A1%D0%B0%D0%BB%D0%B0%D0%B2%D0%B0%D1%82/p3.html"><button class="nav-btn">Записаться на осмотр</button></a>
+        <a href="file:///C:/Users/salav/Desktop/%D0%93%D0%B0%D1%84%D1%83%D1%80%D0%BE%D0%B2%20%D0%A1%D0%B0%D0%BB%D0%B0%D0%B2%D0%B0%D1%82/p2.html"><button id="reminder-button" class="btn">Заказать лекарство</button></a>
+        <a href="file:///C:/Users/salav/Desktop/%D0%93%D0%B0%D1%84%D1%83%D1%80%D0%BE%D0%B2%20%D0%A1%D0%B0%D0%BB%D0%B0%D0%B2%D0%B0%D1%82/p1.html"><button id="reminder-button" class="btn">Добавить напоминание</button></a>
+    </nav>
+</header>
+
+<main>
+    <div class="scroll-container" id="scroll-container">
+        <div class="medicine" onclick="openModal('aspirin')">
+            <img src="img/aspirin.png" alt="Аспирин">
+            <p>Аспирин</p>
+        </div>
+        <div class="medicine" onclick="openModal('paracetamol')">
+            <img src="img/paracetamol.png" alt="Парацетамол">
+            <p>Парацетамол</p>
+        </div>
+        <div class="medicine" onclick="openModal('ibuprofen')">
+            <img src="img/ibuprofen.png" alt="Ибупрофен">
+            <p>Ибупрофен</p>
+        </div>
+        <div class="medicine" onclick="openModal('amoxicillin')">
+            <img src="img/amoxicillin.png" alt="Амоксициллин">
+            <p>Амоксициллин</p>
+        </div>
+        <div class="medicine" onclick="openModal('loratadine')">
+            <img src="img/loratadine.png" alt="Лоратадин">
+            <p>Лоратадин</p>
+        </div>
+        <div class="medicine" onclick="openModal('omeprazole')">
+            <img src="img/omeprazole.png" alt="Омепразол">
+            <p>Омепразол</p>
+        </div>
+
+        <div class="medicine" onclick="openModal('metformin')">
+            <img src="img/metformin.png" alt="Метформин">
+            <p>Метформин</p>
+        </div>
+        <div class="medicine" onclick="openModal('atorvastatin')">
+            <img src="img/atorvastatin.png" alt="Аторвастатин">
+            <p>Аторвастатин</p>
+        </div>
+        <div class="medicine" onclick="openModal('simvastatin')">
+            <img src="img/simvastatin.png" alt="Симвастатин">
+            <p>Симвастатин</p>
+        </div>
+        <div class="medicine" onclick="openModal('ciprofloxacin')">
+            <img src="img/ciprofloxacin.png" alt="Ципрофлоксацин">
+            <p>Ципрофлоксацин</p>
+        </div>
+        <div class="medicine" onclick="openModal('dexamethasone')">
+            <img src="img/dexamethasone.png" alt="Декстрометорфан">
+            <p>Декстрометорфан</p>
+        </div>
+        <div class="medicine" onclick="openModal('furosemide')">
+            <img src="img/furosemide.png" alt="Фуросемид">
+            <p>Фуросемид</p>
+        </div>
+    </div>
+
+    <div class="doctor-section">
+        <img src="img/doctor.png" alt="Доктор" class="doctor-img">
+        <div class="doctor-info">
+            <h2>Игорь Вихарьков</h2>
+            <p>Доктор Игорь — квалифицированный врач-хирург с обширным опытом работы в области общей и специализированной хирургии. Он известен своим вниманием к деталям и высоким уровнем мастерства в проведении операций.</p>
+            <a href="file:///C:/Users/salav/Desktop/%D0%93%D0%B0%D1%84%D1%83%D1%80%D0%BE%D0%B2%20%D0%A1%D0%B0%D0%BB%D0%B0%D0%B2%D0%B0%D1%82/p3.html"><button class="btn">Записаться на консультацию</button></a>
+        </div>
+    </div>
+    <div class="doctor-section">
+        <img src="img/doctor2.png" alt="Доктор" class="doctor-img">
+        <div class="doctor-info">
+            <h2>Наталья Морина</h2>
+            <p>Доктор Наталья — опытный врач с многолетней практикой в области терапии. Она специализируется на диагностике и лечении хронических заболеваний, уделяя особое внимание индивидуальному подходу к каждому пациенту.</p>
+            <a href="file:///C:/Users/salav/Desktop/%D0%93%D0%B0%D1%84%D1%83%D1%80%D0%BE%D0%B2%20%D0%A1%D0%B0%D0%BB%D0%B0%D0%B2%D0%B0%D1%82/p3.html"><button class="btn">Записаться на консультацию</button></a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy;Всем крепкого здоровья!</p>
+</footer>
+
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-img" src="" alt="" style="width: 200px;
+    height: 200px;">
+        <div class="modal-description">
+            <p id="modal-description"></p>
+            
+        </div>
+        <p id="modal-analogs"></p>
+        <p id="modal-contraindications"></p>
+        <p id="modal-usage"></p>
+        <p id="modal-dosage"></p>
+        <p id="modal-composition"></p>
+        <a href="file:///C:/Users/salav/Desktop/%D0%93%D0%B0%D1%84%D1%83%D1%80%D0%BE%D0%B2%20%D0%A1%D0%B0%D0%BB%D0%B0%D0%B2%D0%B0%D1%82/p2.html"><button class="btn order-btn" style="position: absolute; top: 650px; left: 1250px; ">Заказать</button></a>
+    </div>
+</div>
+
+<script>
+    document.getElementById('close-intro').onclick = function() {
+    document.getElementById('intro').style.opacity = 0;
+    setTimeout(() => {
+        document.getElementById('intro').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }, 500);
+}
+
+function openModal(medicineName) {
+    const modal = document.getElementById('modal');
+    const img = document.getElementById('modal-img');
+    const description = document.getElementById('modal-description');
+    const analogs = document.getElementById('modal-analogs');
+    const contraindications = document.getElementById('modal-contraindications');
+    const usage = document.getElementById('modal-usage');
+    const dosage = document.getElementById('modal-dosage');
+    const composition = document.getElementById('modal-composition');
+
+    const medicinesData = {
+        aspirin: {
+            img: 'img/aspirin.png',
+            description: 'Аспирин - противовоспалительное средство.',
+            analogs: 'Парацетамол, Ибупрофен.',
+            contraindications: 'Язва, астма.',
+            usage: 'Принимать по мере необходимости.',
+            dosage: 'По назначению врача.',
+            composition: 'Кислота салициловая.'
+        },
+        paracetamol: {
+            img: 'img/paracetamol.png',
+            description: 'Парацетамол - жаропонижающее средство.',
+            analogs: 'Аспирин, Нимесулид.',
+            contraindications: 'Болезни печени, аллергия.',
+            usage: 'Принимать внутрь.',
+            dosage: '500 мг каждые 4-6 часов.',
+            composition: 'Парацетамол.'
+        },
+        ibuprofen: {
+            img: 'img/ibuprofen.png',
+            description: 'Ибупрофен - противовоспалительное и жаропонижающее средство.',
+            analogs: 'Аспирин, Напроксен.',
+            contraindications: 'Язва желудка, болезнь почек.',
+            usage: 'Принимать после еды.',
+            dosage: '200-400 мг каждые 6-8 часов.',
+            composition: 'Ибупрофен.'
+        },
+        amoxicillin: {
+            img: 'img/amoxicillin.png',
+            description: 'Амоксициллин - антибиотик широкого спектра действия.',
+            analogs: 'Флемоксин, Оспамокс.',
+            contraindications: 'Аллергия к пенициллинам.',
+            usage: 'Принимать внутрь.',
+            dosage: '250-500 мг каждые 8 часов.',
+            composition: 'Амоксициллин тригидрат.'
+        },
+        loratadine: {
+            img: 'img/loratadine.png',
+            description: 'Лоратадин - антигистаминное средство.',
+            analogs: 'Цетиризин, Фексофенадин.',
+            contraindications: 'Беременность, гиперчувствительность.',
+            usage: 'Принимать по мере необходимости.',
+            dosage: '10 мг один раз в день.',
+            composition: 'Лоратадин.'
+        },
+        omeprazole: {
+            img: 'img/omeprazole.png',
+            description: 'Омепразол - ингибитор протонной помпы, используется при заболеваниях желудка.',
+            analogs: 'Пантопразол, Рабепразол.',
+            contraindications: 'Аллергия, беременность.',
+            usage: 'Принимать до еды.',
+            dosage: '20-40 мг в сутки.',
+            composition: 'Омепразол.'
+        },
+        metformin: {
+            img: 'img/metformin.png',
+            description: 'Метформин - используется для лечения диабета 2 типа.',
+            analogs: 'Глюкофаж, Сиофор.',
+            contraindications: 'Болезни почек, ацидоз.',
+            usage: 'Принимать во время еды.',
+            dosage: '500-2000 мг в сутки.',
+            composition: 'Метформин.'
+        },
+        atorvastatin: {
+            img: 'img/atorvastatin.png',
+            description: 'Аторвастатин - средство для снижения уровня холестерина.',
+            analogs: 'Розувастатин, Симвастатин.',
+            contraindications: 'Беременность, болезни печени.',
+            usage: 'Принимать на ночь.',
+            dosage: '10-80 мг в сутки.',
+            composition: 'Аторвастатин кальция.'
+        },
+        simvastatin: {
+            img: 'img/simvastatin.png',
+            description: 'Симвастатин - снижающее холестерин средство.',
+            analogs: 'Аторвастатин, Ловастатин.',
+            contraindications: 'Болезни печени, беременность.',
+            usage: 'Принимать на ночь.',
+            dosage: '5-40 мг в сутки.',
+            composition: 'Симвастатин.'
+        },
+        ciprofloxacin: {
+            img: 'img/ciprofloxacin.png',
+            description: 'Ципрофлоксацин - антибиотик широкого спектра действия.',
+            analogs: 'Офлоксацин, Левофлоксацин.',
+            contraindications: 'Беременность, лактация.',
+            usage: 'Принимать во время еды.',
+            dosage: '500-750 мг дважды в день.',
+            composition: 'Ципрофлоксацин.'
+        },
+        dexamethasone: {
+            img: 'img/dexamethasone.png',
+            description: 'Дексаметазон - кортикостероид, используется для уменьшения воспаления.',
+            analogs: 'Преднизолон, Метилпреднизолон.',
+            contraindications: 'Сахарный диабет, инфекции.',
+            usage: 'По назначению врача.',
+            dosage: '0.5-9 мг в сутки.',
+            composition: 'Дексаметазон.'
+        },
+        furosemide: {
+            img: 'img/furosemide.png',
+            description: 'Фуросемид - диуретик, используется для лечения отеков.',
+            analogs: 'Буметанид, Торсемид.',
+            contraindications: 'Аллергия на сульфаниламиды.',
+            usage: 'Принимать утром.',
+            dosage: '20-80 мг в сутки.',
+            composition: 'Фуросемид.'
+        }
+    };
+
+    const medicine = medicinesData[medicineName];
+
+    img.src = medicine.img;
+    description.innerText = medicine.description;
+    analogs.innerText = `Аналоги: ${medicine.analogs}`;
+    contraindications.innerText = `Противопоказания: ${medicine.contraindications}`;
+    usage.innerText = `Способ применения: ${medicine.usage}`;
+    dosage.innerText = `Дозировка: ${medicine.dosage}`;
+    composition.innerText = `Состав: ${medicine.composition}`;
+
+    modal.style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+}
+</script>
+</body>
+</html>
